@@ -1,4 +1,5 @@
 import sys
+from datetime import datetime
 
 sys.setrecursionlimit(30000)
 
@@ -82,7 +83,6 @@ class BinarySearchTree:
                     self.right = BinarySearchTree(val)
 
     def search(self, val):
-        print('Received ******' +val.__str__())
         if val == self.val:
             return True
 
@@ -145,17 +145,6 @@ class BinarySearchTree:
 
         return True
 
-if __name__ == '__main__':
-    print('Binary Search TREE initialize')
 
-    bst = BinarySearchTree()
-    bst.insert(3)
-    bst.insert(1)
-    bst.insert(2)
-    bst.insert(4)
-    bst.insert(5)
 
-    print(bst.search(5))
-    bst.delete(5)
-    print(bst.search(5))
-    print('Binary Search TREE END')
+
